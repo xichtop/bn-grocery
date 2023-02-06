@@ -1,0 +1,20 @@
+<div class="toolbar">
+    <div class="toolbar-logo">
+        <button mat-icon-button (click)="onToggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="toolbar-logo-img">
+            <a routerLink="/">TẠP HÓA BÌNH NHẬT</a>
+        </div>
+    </div>
+    <div class="toolbar-link">
+        <!-- <a class="toolbar-link-item" routerLink="/">Trang chủ</a> -->
+        <a class="toolbar-link-item" routerLink="/product">Sản phẩm</a>
+        <a *ngIf="!isAuth" class="toolbar-link-item" routerLink="/auth">Đăng nhập</a>
+        <a 
+            *ngIf="isAuth" 
+            class="toolbar-link-item" 
+            (click)="onLogout()"
+        >Đăng xuất</a>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+@import '../../../../assets/scss/mixin';
+
+.product-title {
+    @include flex(center, center);
+}
+
+.add-product {
+    @include flex(center, center);
+    flex-direction: column;
+
+    &-item {
+        width: 30%;
+
+        @include mobile {
+            width: 90%;
+        }
+
+        @include tablet {
+            width: 90%;
+        }
+    }
+
+    &-button {
+        padding-top: 20px;
+
+        button {
+            margin: 0 10px;
+        }
+    }
+}

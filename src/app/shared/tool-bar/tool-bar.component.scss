@@ -1,0 +1,39 @@
+@import '../../../assets/scss/mixin';
+
+.toolbar {
+    width: 100%;
+    @include flex(center, space-between);
+
+    &-logo {
+        @include flex(center, center);
+
+        &-img {
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+
+    &-link {
+        @include flex(center, center);
+
+        &-item {
+            text-decoration: none;
+            color: white;
+            padding: 0 10px;
+
+            @include mobile {
+                display: none;
+            }
+
+            @include tablet {
+                display: none;
+            }
+        }
+        
+        &-item:hover, &-item:active {
+            color: lightgray;
+        }
+    }
+}
